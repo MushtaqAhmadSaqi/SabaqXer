@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>FocusTube - Sprint 1</title>
+  <style>
+    body {
+      font-family: Arial;
+      background: #0f172a;
+      color: white;
+      text-align: center;
+    }
+
+    input {
+      width: 60%;
+      padding: 10px;
+      margin: 20px;
+    }
+
+    button {
+      padding: 10px 20px;
+      cursor: pointer;
+    }
+
+    #video-container {
+      margin-top: 20px;
+    }
+
+    iframe {
+      width: 80%;
+      height: 400px;
+      border: none;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>🎯 FocusTube</h1>
+
+  <input type="text" id="youtube-url" placeholder="Paste YouTube URL here">
+  <br>
+  <button onclick="loadVideo()">Load Video</button>
+
+  <div id="video-container"></div>
+
+  <h2 id="title"></h2>
+  <p id="description"></p>
+
+  <script>
+    function loadVideo() {
+      const url = document.getElementById("youtube-url").value;
+
+      // Extract video ID
+      const videoId = extractVideoID(url);
+
+      if (!videoId) {
+        alert("Invalid URL");
+        return;
+      }
+
+      // Embed video
+      document.getElementById("video-container").innerHTML =
+        `<iframe src="https://www.youtube.com/embed/${videoId}" allowfullscreen></iframe>`;
+
+      // Temporary title/description (we'll fix in next sprint)
+      document.getElementById("title").innerText = "Video Loaded";
+      document.getElementById("description").innerText = "Description will come from API later";
+    }
+
+    function extractVideoID(url) {
+      const regex = /(?:v=|\/)([0-9A-Za-z_-]{11})/;
+      const match = url.match(regex);
+      return match ? match[1] : null;
+    }
+  </script>
+
+</body>
+</html>

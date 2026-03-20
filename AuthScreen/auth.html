@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OpenPrep — Authentication</title>
+    <link rel="stylesheet" href="auth.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+
+<body>
+    <div class="auth-wrapper">
+        <!-- Background Decorations -->
+        <div class="background-shape"></div>
+        <div class="secondary-shape"></div>
+
+        <!-- ── SIGN IN PANEL ───────────────────────────── -->
+        <div class="credentials-panel signin">
+            <h2 class="slide-element">Login</h2>
+            <p class="slide-element subtitle">Pick up right where you left off.</p>
+
+            <form action="#">
+                <div class="field-wrapper slide-element">
+                    <input type="text" id="loginEmail" placeholder=" " required>
+                    <label for="loginEmail">Email Address</label>
+                    <i class="fa-solid fa-envelope"></i>
+                </div>
+
+                <div class="field-wrapper slide-element">
+                    <input type="password" id="loginPassword" placeholder=" " required>
+                    <label for="loginPassword">Password</label>
+                    <i class="fa-solid fa-lock"></i>
+                </div>
+
+                <div class="field-wrapper slide-element">
+                    <button class="submit-button" type="submit">Login</button>
+                </div>
+
+                <div class="switch-link slide-element">
+                    <p>Don't have an account? <br> <a href="#" class="register-trigger">Sign Up</a></p>
+                </div>
+            </form>
+        </div>
+
+        <div class="welcome-section signin">
+            <h2 class="slide-element">WELCOME BACK!</h2>
+        </div>
+
+        <!-- ── SIGN UP PANEL ───────────────────────────── -->
+        <div class="credentials-panel signup">
+            <h2 class="slide-element">Create your account</h2>
+            <p class="slide-element subtitle">Free forever. No credit card needed.</p>
+
+            <button type="button" class="btn-google slide-element">
+                <img src="https://www.svgrepo.com/show/475656/google-color.svg" alt="Google">
+                <span>Continue with Google</span>
+            </button>
+
+            <div class="divider slide-element"><span>or sign up with email</span></div>
+
+            <form action="#">
+                <div class="field-row slide-element">
+                    <div class="field-wrapper">
+                        <input type="text" id="signupFirst" placeholder=" " required>
+                        <label for="signupFirst">First name</label>
+                        <i class="fa-solid fa-user"></i>
+                    </div>
+                    <div class="field-wrapper">
+                        <input type="text" id="signupLast" placeholder=" " required>
+                        <label for="signupLast">Last name</label>
+                        <i class="fa-solid fa-user"></i>
+                    </div>
+                </div>
+
+                <div class="field-wrapper slide-element">
+                    <input type="email" id="signupEmail" placeholder=" " required>
+                    <label for="signupEmail">Email address</label>
+                    <i class="fa-solid fa-envelope"></i>
+                </div>
+
+                <div class="field-wrapper slide-element">
+                    <input type="password" id="signupPassword" placeholder=" " required>
+                    <label for="signupPassword">Password (Min. 8 chars)</label>
+                    <i class="fa-solid fa-lock"></i>
+                </div>
+
+                <div class="field-wrapper slide-element">
+                    <input type="password" id="signupConfirm" placeholder=" " required>
+                    <label for="signupConfirm">Confirm password</label>
+                    <i class="fa-solid fa-lock"></i>
+                </div>
+
+                <div class="field-wrapper slide-element">
+                    <button class="submit-button" type="submit">Create Account</button>
+                </div>
+
+                <p class="terms-text slide-element">
+                    By signing up you agree to our <br>
+                    <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a>.
+                </p>
+
+                <div class="switch-link slide-element">
+                    <p>Already have an account? <br> <a href="#" class="login-trigger">Sign In</a></p>
+                </div>
+            </form>
+        </div>
+
+        <div class="welcome-section signup">
+            <h2 class="slide-element">WELCOME!</h2>
+        </div>
+
+    </div>
+
+    <div class="footer">
+        <p>Developed by <a href="#" target="_blank">Saqi Jani</a></p>
+    </div>
+
+    <script type="module" src="auth.js"></script>
+</body>
+
+</html>
